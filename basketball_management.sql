@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 06 Ιουν 2020 στις 16:27:24
+-- Χρόνος δημιουργίας: 06 Ιουν 2020 στις 16:45:26
 -- Έκδοση διακομιστή: 10.4.11-MariaDB
 -- Έκδοση PHP: 7.2.30
 
@@ -89,6 +89,13 @@ CREATE TABLE `announcement` (
   `text` text CHARACTER SET utf8 NOT NULL,
   `date_time` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `announcement`
+--
+
+INSERT INTO `announcement` (`id`, `user_id`, `title`, `text`, `date_time`) VALUES
+(64, 29, 'Διπλωματική Εργασία', 'Το παρόν έργο αποτελεί μέρος διπλωματικής', '2020-06-06 17:42:08');
 
 -- --------------------------------------------------------
 
@@ -553,7 +560,7 @@ ALTER TABLE `user_update_history`
 -- AUTO_INCREMENT για πίνακα `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT για πίνακα `apk_version`
