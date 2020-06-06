@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 06 Ιουν 2020 στις 16:02:59
+-- Χρόνος δημιουργίας: 06 Ιουν 2020 στις 16:27:24
 -- Έκδοση διακομιστή: 10.4.11-MariaDB
 -- Έκδοση PHP: 7.2.30
 
@@ -350,7 +350,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `name`, `surname`, `email`, `phone`, `driving_licence`, `living_place`, `profession`, `profile_pic`, `active`, `rate`, `language`, `polling_time`, `password_recovery_url`, `mobile_token`) VALUES
-(29, 'admin', '$2y$10$09XHC4hZlHod3SS/B41FUeNM7WCrfSsQ1oGcHOikRVBNGkVm20ZBa', 'Διαχειριστής', '1', 'my_mail@yahoo.com', '6987604110', '0', 1, 1, 'assets/img/users/Sekvce5XhWBPKGoYFoDR', 0, 2, 'gr', 20, NULL, '');
+(29, 'admin', '$2y$10$09XHC4hZlHod3SS/B41FUeNM7WCrfSsQ1oGcHOikRVBNGkVm20ZBa', 'Admin', 'Admin', 'my_mail@yahoo.com', '6987604110', '0', 1, 1, 'assets/img/users/Sekvce5XhWBPKGoYFoDR', 0, 2, 'gr', 20, NULL, ''),
+(156, 'ssholla', '$2y$10$V7uwFaCdRBWXuNeN0cnuG.fBad8ISY38JTEoUWX3rHgyKkQjqFZUi', 'User', 'User', 'it_support@gmail.com', '2020', '1', 1, 10, 'assets/img/users/aUi6OUZisWh0KIb6ewgL', 0, 3, 'gr', 20, '', NULL);
 
 --
 -- Δείκτες `user`
@@ -394,7 +395,8 @@ CREATE TABLE `user_categories` (
 --
 
 INSERT INTO `user_categories` (`id`, `name`, `active`) VALUES
-(1, 'Admin', 0);
+(1, 'Admin', 0),
+(10, 'IT Support', 0);
 
 -- --------------------------------------------------------
 
@@ -419,13 +421,6 @@ CREATE TABLE `user_update_history` (
   `rate` int(2) NOT NULL,
   `update_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Άδειασμα δεδομένων του πίνακα `user_update_history`
---
-
-INSERT INTO `user_update_history` (`id`, `user_id`, `username`, `password`, `name`, `surname`, `email`, `phone`, `driving_licence`, `living_place`, `profession`, `profile_pic`, `active`, `rate`, `update_time`) VALUES
-(1, 29, 'admin', '$2y$10$09XHC4hZlHod3SS/B41FUeNM7WCrfSsQ1oGcHOikRVBNGkVm20ZBa', 'Διαχειριστής', '1', 'my_mail@yahoo.com', '6987604110', 1, 1, 1, 'assets/img/users/Sekvce5XhWBPKGoYFoDR', 0, 2, '2020-06-06 14:02:42');
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -630,19 +625,19 @@ ALTER TABLE `team_groups`
 -- AUTO_INCREMENT για πίνακα `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT για πίνακα `user_categories`
 --
 ALTER TABLE `user_categories`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT για πίνακα `user_update_history`
 --
 ALTER TABLE `user_update_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Περιορισμοί για άχρηστους πίνακες
