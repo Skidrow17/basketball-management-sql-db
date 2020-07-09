@@ -357,7 +357,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `name`, `surname`, `email`, `phone`, `driving_licence`, `living_place`, `profession`, `profile_pic`, `active`, `rate`, `language`, `polling_time`, `password_recovery_url`, `mobile_token`) VALUES
-(29, 'admin', '$2y$10$09XHC4hZlHod3SS/B41FUeNM7WCrfSsQ1oGcHOikRVBNGkVm20ZBa', 'Admin', 'Admin', 'my_mail@yahoo.com', '6987604110', '0', 1, 1, 'assets/img/users/Sekvce5XhWBPKGoYFoDR', 0, 2, 'gr', 20, NULL, ''),
+(29, 'admin', '$2y$10$09XHC4hZlHod3SS/B41FUeNM7WCrfSsQ1oGcHOikRVBNGkVm20ZBa', 'Admin', 'Admin', 'my_mail@yahoo.com', '0123456789', '0', 1, 1, 'assets/img/users/Sekvce5XhWBPKGoYFoDR', 0, 2, 'gr', 20, NULL, ''),
 (156, 'user', '$2y$10$V7uwFaCdRBWXuNeN0cnuG.fBad8ISY38JTEoUWX3rHgyKkQjqFZUi', 'User', 'User', 'it_support@gmail.com', '2020', '1', 1, 10, 'assets/img/users/aUi6OUZisWh0KIb6ewgL', 0, 3, 'gr', 20, '', NULL);
 
 --
